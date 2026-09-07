@@ -1,10 +1,10 @@
-# CareerFit — Evidence-Grounded Job Requirement Verification
+# Job Fit Proof — Evidence-Grounded Job Requirement Verification
 
-CareerFit is an NLP/ML portfolio project that asks a stricter question than a typical CV–job similarity score:
+Job Fit Proof is an NLP/ML portfolio project that asks a stricter question than a typical CV–job similarity score:
 
 > **Can the candidate's CV actually support each requirement in a job description?**
 
-Instead of producing one opaque “match percentage”, CareerFit breaks a job description into atomic requirements and assigns one of four evidence verdicts to each requirement:
+Instead of producing one opaque “match percentage”, Job Fit Proof breaks a job description into atomic requirements and assigns one of four evidence verdicts to each requirement:
 
 - **Verified** — candidate evidence supports the requirement
 - **Partially Supported** — some evidence exists, but the requirement is not fully supported
@@ -19,7 +19,7 @@ This repository is intentionally presented as an **ML/NLP research project**, no
 
 Most job-fit tools reduce a CV and a job description to keyword overlap or a single similarity score. That can hide an important distinction: a candidate may mention a technology without proving the level, duration, or context required by the role.
 
-CareerFit reframes job fit as **requirement-level evidence verification**.
+Job Fit Proof reframes job fit as **requirement-level evidence verification**.
 
 ```text
 Job Description
@@ -148,7 +148,7 @@ The private/full experimental data are not published in this repository. The scr
 
 ## Limitations
 
-CareerFit is a research prototype and **must not be treated as a hiring decision system**.
+Job Fit Proof is a research prototype and **must not be treated as a hiring decision system**.
 
 Current limitations include:
 
