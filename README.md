@@ -1,19 +1,33 @@
-# 🎈 Blank app template
+# Job Fit Proof
 
-A simple Streamlit app template for you to modify!
+Evidence-based CV ↔ job requirement verification research prototype.
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blank-app-template.streamlit.app/)
+## Live app engine
+The deployed app uses the **saved trained TF-IDF baseline** for genuine live inference.
 
-### How to run it on your own machine
+The evaluated hybrid model (TF-IDF + SBERT + NLI) is preserved in the research results, but it is intentionally not the live deployment engine because:
+- its improvement over TF-IDF was only +0.002 Macro-F1;
+- the NLI model is too heavy for a lightweight portfolio deployment;
+- using TF-IDF keeps the live app reproducible and honest.
 
-1. Install the requirements
+## Provisional benchmark
 
-   ```
-   $ pip install -r requirements.txt
-   ```
+| Model | Test Accuracy | Test Macro-F1 |
+|---|---:|---:|
+| TF-IDF | 0.7844 | 0.5944 |
+| SBERT | 0.6396 | 0.4681 |
+| Zero-shot NLI | 0.4018 | 0.2094 |
+| Hybrid | **0.7871** | **0.5965** |
 
-2. Run the app
+Metrics use analytical seed labels, not final human-gold labels.
 
-   ```
-   $ streamlit run streamlit_app.py
-   ```
+## Run locally
+
+```bash
+pip install -r requirements.txt
+streamlit run streamlit_app.py
+```
+
+## Important limitation
+
+Live free-form CV input is a distribution shift from the structured candidate representation used in the research benchmark. Treat live predictions as prototype outputs, not validated hiring decisions.
