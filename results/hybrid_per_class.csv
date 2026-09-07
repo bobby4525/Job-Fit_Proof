@@ -1,0 +1,5 @@
+evidence_class,precision,recall,f1,support
+Verified,0.895,0.823,0.857,1669
+Partially Supported,0.278,0.750,0.406,36
+Not Verified,0.328,0.745,0.455,51
+Insufficient Evidence,0.663,0.672,0.667,494

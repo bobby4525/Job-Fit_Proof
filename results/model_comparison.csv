@@ -1,0 +1,5 @@
+model,test_accuracy,test_macro_f1
+TF-IDF + Logistic Regression,0.7844,0.5944
+SBERT + Logistic Regression,0.6396,0.4681
+Zero-shot DeBERTa NLI,0.4018,0.2094
+Selective Hybrid,0.7871,0.5965
